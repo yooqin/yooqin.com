@@ -47,10 +47,10 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-		try {
+        try {
 
-			$validator = Validator::make($request->all(),
-				[
+            $validator = Validator::make($request->all(),
+                [
 				'title' => 'required|min:2|max:100',
 				'keywords' => 'required',
 				'description' => 'required',

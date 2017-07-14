@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- user-scalable=no 禁用缩放功能 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>后台</title>
+
+	<!-- Bootstrap -->
+	<link href="bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="public/css/core.css" rel="stylesheet">
+	<link href="public/adm/adm.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	</head>
+<body>
+	<!-- start navigation -->
+	<nav class="main-navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<a href="/" class='logo usercenter'>
+                        <img src='public/images/logo.png'>
+                        <span>个人中心</span> 
+                    </a>
+				</div>
+				<div class="col-md-9">
+					<div class="navbar-header">
+						<span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu">
+							<span class="sr-only">打开菜单</span>
+							<span class="glyphicon glyphicon-th-list open-menu" aria-hidden="true"></span>
+						</span>
+					</div>
+					<div class="collapse navbar-collapse" id="main-menu">
+						<ul class="menu">
+							<li class="presentation"><a href="index.html">个人中心</a></li>
+							<li class="nav-current" role="presentation"><a href="blog.html">博客管理</a></li>
+							<li class="presentation"><a href="news.html">资讯管理</a></li>
+							<li class="presentation"><a href="tags.html">分类管理</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</nav>
+
+	<!-- end navigation -->
+    <div class="container">
+        <nav class="category" role="navigation">
+            <ul class="menu">
+                <li class="nav-current" role="presentation"><a href="/">博客列表</a></li>
+                <li class="presentation"><a href="/">创建博客</a></li>
+            </ul>
+        </nav>
+    </div>
+
+	<!-- start section -->
+	<section class="content-warp">
+		<div class="container">
+		    <main class="adm-main-content">
+				
+				<div class="list">
+				<table class="table table-hover">
+				  <thead>
+					<tr>
+					  <th>#</th>
+					  <th>标题</th>
+					  <th>分类</th>
+					  <th>发布时间</th>
+					  <th>操作</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <th scope="row">1</th>
+					  <td>Mark</td>
+					  <td>Otto</td>
+					  <td>Otto</td>
+					  	<td>
+							<a href=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+  
+							<a href=""><span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span></a>
+						</td>
+					</tr>
+					<tr>
+					  <th scope="row">2</th>
+					  <td>Jacob</td>
+					  <td>Thornton</td>
+					  <td>Thornton</td>
+					  	<td>
+							<a href=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+							<a href=""><span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span></a>
+
+						</td>
+					</tr>
+					<tr>
+					  <th scope="row">3</th>
+					  <td>Larry</td>
+					  <td>the Bird</td>
+					  <td>the Bird</td>
+					  <td>
+							<a href=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+							<a href=""><span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span></a>
+						</td>
+					</tr>
+				  </tbody>
+				</table>
+				</div>
+                
+                                 
+				<nav class="pagination-wrap" role="navigation">
+					<ul class="pagination">
+						<li>
+						  <a href="#" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						  </a>
+						</li>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li>
+						  <a href="#" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						  </a>
+						</li>
+					  </ul>	
+				</nav>
+			</main>	
+		</div>
+	</section>
+	<!-- end section -->
+
+	<!-- start footer -->
+	<footer class="main-footer">
+	<!-- end footer -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">Copyright@www.yooqin.com | <a href="">京ICP20150608</a></div>
+			</div>
+		</div>
+	</div>
+	</footer>	
+
+	<!-- go back -->
+	<a href="#" id="back-to-top" title="嗖的滚上去~~" data-toggle="tooltip" data-placement="left">
+		<span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+	</a>
+
+	
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<script src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="public/js/yooqin.js"></script>
+</body>
+</html>

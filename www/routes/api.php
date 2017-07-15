@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 //BackEnd pages routes
-Route::Group(['namespace' => 'Admin'], function() {
+Route::Group(['namespace' => 'Admin', 'middleware' => 'auth'], function() {
 
     //blog
     Route::resource('/adm/blog', 'BlogController');

@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 
 //BackEnd pages routes
-Route::Group(['namespace' => 'Admin'], function() {
+Route::Group(['namespace' => 'Admin', 'middleware' => 'auth'], function() {
 
     //blog
     Route::get('/adm/blog', 'BlogController@index');
@@ -29,3 +29,7 @@ Route::Group(['namespace' => 'Admin'], function() {
 
 
 //FrontEnd pages routes
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

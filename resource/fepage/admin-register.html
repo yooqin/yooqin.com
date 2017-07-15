@@ -28,11 +28,11 @@
 			<div class="row">
 				<div class="col-md-3">
 					<a href="/" class='logo usercenter'>
-                        <img src='public/images/logo.png'>
-                        <span>个人中心</span> 
+                        <img src='public/images/logo-admin.png'>
                     </a>
 				</div>
-				<div class="col-md-9">
+                <div class="col-md-5"></div>
+				<div class="col-md-4">
 					<div class="navbar-header">
 						<span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu">
 							<span class="sr-only">打开菜单</span>
@@ -41,10 +41,8 @@
 					</div>
 					<div class="collapse navbar-collapse" id="main-menu">
 						<ul class="menu">
-							<li class="presentation"><a href="index.html">个人中心</a></li>
-							<li class="nav-current" role="presentation"><a href="blog.html">博客管理</a></li>
-							<li class="presentation"><a href="news.html">资讯管理</a></li>
-							<li class="presentation"><a href="tags.html">分类管理</a></li>
+                            <li class="presentation"><a href="index.html">登录</a></li>
+							<li class="nav-current"><a href="tags.html">注册</a></li>
 						</ul>
 					</div>
 				</div>
@@ -53,102 +51,59 @@
 		
 	</nav>
 
-	<!-- end navigation -->
-    <div class="container">
-        <nav class="category" role="navigation">
-            <ul class="menu">
-                <li class="presentation" role="presentation"><a href="/">博客列表</a></li>
-                <li class="nav-current"><a href="/">创建博客</a></li>
-            </ul>
-        </nav>
-    </div>
-
 	<!-- start section -->
 	<section class="content-warp">
 		<div class="container">
 		    <main class="adm-main-content">
 				<div class="list">
-                	<form class="form-horizontal">
+                	<form class="form-horizontal login-module" method="post" action="/register">
 
                         <div class="form-group">
-							<label class="col-sm-2 control-label">博客属性</label>
-							<div class="col-sm-4">
-								<select class="form-control" name="category_id">
-                                    <option>互联网</option>
-                                    <option>服务器</option>
-                                    <option>编程技术</option>
-								</select>
-							</div>
-                            <div class="col-sm-1">
-                                <a href="" class="editcategory btn-edit-category"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></a> 
-                            </div>
+						    <label class="col-sm-2 control-label">头像</label>
+						    <div class="col-sm-6">
+						        <input type="input" class="form-control" name="head_avator" placeholder="头像URL">
+						    </div>
+                            <div class="col-sm-4"></div>
+					    </div>
 
-                            <div class="col-sm-2">
-                                <select class="form-control" name="source">
-                                    <option>源创</option>
-                                    <option>转载</option>
-								</select>
-							</div>
-
-                            <div class="col-sm-2">
-                                <select class="form-control" name="blog_type">
-                                    <option>Markdown博客</option>
-                                    <option>相册游记</option>
-								</select>
-							</div>
-
-					  	</div>
 
 					    <div class="form-group">
-						    <label class="col-sm-2 control-label">标题</label>
-						    <div class="col-sm-8">
-						        <input type="input" class="form-control" name="title" placeholder="title">
+						    <label class="col-sm-2 control-label">用户名</label>
+						    <div class="col-sm-6">
+						        <input type="input" class="form-control" name="name" placeholder="账号">
 						    </div>
-					    </div>
-					    
-						<div class="form-group">
-							<label class="col-sm-2 control-label">描述</label>
-							<div class="col-sm-8">
-						  		<input type="input" class="form-control" name="description" placeholder="descript">
-							</div>
-					  	</div>
-
-                        <div class="form-group">
-						    <label class="col-sm-2 control-label">关键词</label>
-						    <div class="col-sm-5">
-						        <input type="input" class="form-control" name="keywords" placeholder="keywords">
-						    </div>
-                            <div class="col-sm-5 input-tips"><p class="text-warning">* 请使用,分割关键词会自动转换为标签</p></div>
+                            <div class="col-sm-4"></div>
 					    </div>
 
-
-						<div class="form-group">
-							<label class="col-sm-2 control-label">自定义URI</label>
-							<div class="col-sm-5">
-						  		<input type="input" class="form-control" name="uri" placeholder="uri">
-							</div>
-					  	</div>
+                        <div class="form-group">
+						    <label class="col-sm-2 control-label">邮箱</label>
+						    <div class="col-sm-6">
+						        <input type="input" class="form-control" name="email" placeholder="邮箱">
+						    </div>
+                            <div class="col-sm-4"></div>
+					    </div>
 
                         <div class="form-group">
-							<label class="col-sm-2 control-label">属性</label>
-							
+						    <label class="col-sm-2 control-label">密码</label>
+						    <div class="col-sm-6">
+						        <input type="password" class="form-control" name="password">
+						    </div>
+                            <div class="col-sm-4"></div>
+					    </div>
 
-					  	</div>
-
-						
-
-						<div class="form-group">
-							<div class="col-sm-12">
-								<div id="editormd">
-									<textarea style="display:none;"></textarea>
-								</div>
-							</div>
-					  	</div>
+                        <div class="form-group">
+						    <label class="col-sm-2 control-label">重复密码</label>
+						    <div class="col-sm-6">
+						        <input type="password" class="form-control" name="password_confirmation">
+						    </div>
+                            <div class="col-sm-4"></div>
+					    </div>
 
 
+					   
 					    <div class="form-group">
 						    <div class="col-sm-offset-2 col-sm-10">
-						        <button type="submit" class="btn btn-default">点击发布</button>
+						        <button type="submit" class="btn btn-default">点击注册</button>
 						    </div>
 					    </div>
 				    </form> 

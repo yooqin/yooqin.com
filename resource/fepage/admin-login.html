@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- user-scalable=no 禁用缩放功能 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>后台</title>
+
+	<!-- Bootstrap -->
+	<link href="bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="public/css/core.css" rel="stylesheet">
+	<link href="public/adm/adm.css" rel="stylesheet">
+
+	<link href="public/editor.md-master/css/editormd.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	</head>
+<body>
+	<!-- start navigation -->
+	<nav class="main-navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<a href="/" class='logo usercenter'>
+                        <img src='public/images/logo-admin.png'>
+                    </a>
+				</div>
+                <div class="col-md-5"></div>
+				<div class="col-md-4">
+					<div class="navbar-header">
+						<span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu">
+							<span class="sr-only">打开菜单</span>
+							<span class="glyphicon glyphicon-th-list open-menu" aria-hidden="true"></span>
+						</span>
+					</div>
+					<div class="collapse navbar-collapse" id="main-menu">
+						<ul class="menu">
+                            <li class="nav-current"><a href="index.html">登录</a></li>
+							<li class="presentation"><a href="tags.html">注册</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</nav>
+
+	<!-- start section -->
+	<section class="content-warp">
+		<div class="container">
+		    <main class="adm-main-content">
+				<div class="list">
+                    <form method="POST" action="/login" class="form-horizontal login-module">
+
+					    <div class="form-group">
+						    <label class="col-sm-2 control-label">账号</label>
+						    <div class="col-sm-6">
+						        <input type="input" class="form-control" name="email" placeholder="账号">
+						    </div>
+                            <div class="col-sm-4"></div>
+					    </div>
+
+                        <div class="form-group">
+						    <label class="col-sm-2 control-label">密码</label>
+						    <div class="col-sm-6">
+						        <input type="password" class="form-control" name="password">
+						    </div>
+                            <div class="col-sm-4"></div>
+					    </div>
+
+                        <div class="form-group">
+						    <label class="col-sm-2 control-label">记住登录</label>
+						    <div class="col-sm-6">
+                                <input type="checkbox" name="remember">
+						    </div>
+                            <div class="col-sm-4"></div>
+					    </div>
+
+					    <div class="form-group">
+						    <div class="col-sm-offset-2 col-sm-10">
+						        <button type="submit" class="btn btn-default">点击登录</button>
+						    </div>
+					    </div>
+				    </form> 
+			    </div>
+			</main>	
+		</div>
+	</section>
+	<!-- end section -->
+
+	<!-- start footer -->
+	<footer class="main-footer">
+	<!-- end footer -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">Copyright@www.yooqin.com | <a href="">京ICP20150608</a></div>
+			</div>
+		</div>
+	</div>
+	</footer>	
+
+	<!-- go back -->
+	<a href="#" id="back-to-top" title="嗖的滚上去~~" data-toggle="tooltip" data-placement="left">
+		<span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+	</a>
+
+	
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<script src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script src="public/editor.md-master/editormd.min.js"></script>
+
+	<script src="public/js/yooqin.js"></script>
+
+	<script type="text/javascript">
+		var Editor;
+        $(function() {
+            Editor = editormd("editormd", {
+                width   : "90%",
+                height  : 640,
+                syncScrolling : "single",
+                path    : "./public/editor.md-master/"
+            });
+            
+            /*
+            // or
+            testEditor = editormd({
+                id      : "test-editormd",
+                width   : "90%",
+                height  : 640,
+                path    : "../lib/"
+            });
+            */
+        });
+
+	</script>
+</body>
+</html>

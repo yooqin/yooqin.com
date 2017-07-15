@@ -1,3 +1,17 @@
+create table Users(
+    `id` int(10) unsigned not null AUTO_INCREMENT,
+    `email` varchar(256) not null,
+    `name` char(32) not null,
+    `password` varchar(256) not null,
+    `remember_token` varchar(256) default null,
+    `deleted_at` int(10) unsigned default 0,
+    `created_at` int(10) unsigned not null,
+    `updated_at` int(10) unsigned not null,
+    PRIMARY KEY(`id`),
+    key `email_idx`(`email`),
+    key `name_idx`(`name`)
+)engine=innodb charset=latin1;
+
 create table Blog(
     `id` int(10) unsigned not null AUTO_INCREMENT,
     `user_id` int(10) unsigned not null,

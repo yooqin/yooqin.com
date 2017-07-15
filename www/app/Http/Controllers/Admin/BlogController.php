@@ -48,32 +48,30 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         try {
-
             $validator = Validator::make($request->all(),
                 [
-				'title' => 'required|min:2|max:100',
-				'keywords' => 'required',
-				'description' => 'required',
-				'content' => 'required',
-				]
-			);
+                'title' => 'required|min:2|max:100',
+                'keywords' => 'required',
+                'description' => 'required',
+                'content' => 'required',
+                ]
+            );
 
-			if ($validator->fails()) {
-				throw new \Exception($validator->errors()->first());
-			}
+            if ($validator->fails()) {
+                throw new \Exception($validator->errors()->first());
+            }
 
-			$blog_id = app(Blog::class)->create($request);
-			if (!$blog_id) {
-				throw new \Exception('数据创建失败');
-			}
-			
-			return $this->jsonSuccess(['blog_id'=>$blog_id]);
+            $blog_id = app(Blog::class)->create($request);
+            if (!$blog_id) {
+                throw new \Exception('数据创建失败');
+            }
 
-		} catch (\Exception $e){
+            return $this->jsonSuccess(['blog_id'=>$blog_id]);
 
-			return $this->jsonFailed($e->getMessage());
+        } catch (\Exception $e){
 
-		}
+            return $this->jsonFailed($e->getMessage());
+        }
     }
 
     /**
@@ -84,7 +82,7 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-		return $this->jsonFailed('api not found');		
+        return $this->jsonFailed('api not found');		
     }
 
     
@@ -98,33 +96,32 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-    	try {
+        try {
 
-			$validator = Validator::make($request->all(),
-				[
-				'title' => 'required|min:2|max:100',
-				'keywords' => 'required',
-				'description' => 'required',
-				'content' => 'required',
-				]
-			);
+            $validator = Validator::make($request->all(),
+                [
+                'title' => 'required|min:2|max:100',
+                'keywords' => 'required',
+                'description' => 'required',
+                'content' => 'required',
+                ]);
 
-			if ($validator->fails()) {
-				throw new \Exception($validator->errors()->first());
-			}
+            if ($validator->fails()) {
+                throw new \Exception($validator->errors()->first());
+            }
 
-			$blog_id = app(Blog::class)->update($request);
-			if (!$blog_id) {
-				throw new \Exception('数据创建失败');
-			}
-			
-			return $this->jsonSuccess(['blog_id'=>$blog_id]);
+            $blog_id = app(Blog::class)->update($request);
+            if (!$blog_id) {
+                throw new \Exception('数据创建失败');
+            }
 
-		} catch (\Exception $e){
+            return $this->jsonSuccess(['blog_id'=>$blog_id]);
 
-			return $this->jsonFailed($e->getMessage());
+        } catch (\Exception $e){
 
-		}
+            return $this->jsonFailed($e->getMessage());
+
+        }
     }
 
     /**
@@ -135,6 +132,6 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-		return $this->jsonFailed('api not found');		
+        return $this->jsonFailed('api not found');		
     }
 }

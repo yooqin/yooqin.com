@@ -21,66 +21,45 @@
 		<tr>
 		  <th>#</th>
 		  <th>标题</th>
-		  <th>分类</th>
+		  <th>类型</th>
+		  <th>方式</th>
+		  <th>浏览数</th>
 		  <th>发布时间</th>
 		  <th>操作</th>
 		</tr>
 	  </thead>
 	  <tbody>
+        @foreach($list['list'] as $_item)
 		<tr>
-		  <th scope="row">1</th>
-		  <td>Mark</td>
-		  <td>Otto</td>
-		  <td>Otto</td>
-			  <td>
-				<a href=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+		  <th scope="row">{{$_item['id']}}</th>
+		  <td>{{$_item['title']}}</td>
+		  <td>{{$_item['type_name']}}</td>
+		  <td>{{$_item['source_name']}}</td>
+		  <td>{{$_item['views']}}</td>
+		  <td>{{$_item['created_date']}}</td>
+		    <td>
+                <a href="javascript:void(0);" class="btn_edit" data-id="{{$_item['id']}}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
 
-				<a href=""><span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span></a>
+				&nbsp;&nbsp;<a href="javascript:void(0);" class="btn_delete" data-id="{{$_item['id']}}"><span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span></a>
 			</td>
 		</tr>
-		<tr>
-		  <th scope="row">2</th>
-		  <td>Jacob</td>
-		  <td>Thornton</td>
-		  <td>Thornton</td>
-			  <td>
-				<a href=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-				<a href=""><span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span></a>
-
-			</td>
-		</tr>
-		<tr>
-		  <th scope="row">3</th>
-		  <td>Larry</td>
-		  <td>the Bird</td>
-		  <td>the Bird</td>
-		  <td>
-				<a href=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-				<a href=""><span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span></a>
-			</td>
-		</tr>
+        @endforeach
 	  </tbody>
 	</table>
 </div>
 
                  
 <nav class="pagination-wrap" role="navigation">
-    <ul class="pagination">
-        <li>
-          <a href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
-        <li class="active"><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li>
-          <a href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li>
-      </ul>    
+    {{$list['paginate']['links']}}    
 </nav>
+@endsection
+
+@section('js')
+<script src="/static/js/xhr.js"></script>
+<script src="/static/js/message.js"></script>
+<script src="/static/js/api.js"></script>
+<script src="/static/js/blog.js"></script>
+<script type="text/javascript">
+	blog.bindEvent();
+</script>
 @endsection

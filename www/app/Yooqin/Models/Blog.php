@@ -3,26 +3,53 @@
 namespace App\Yooqin\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth; 
+use App\Yooqin\Consts\BlogConst;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Blog extends Model
 {
-    const DEFAULT_TYPE = 1;
-    const DEFAULT_SOURCE = 1;
-    const DEFAULT_VIEWS = 1;
+    use SoftDeletes;
 
-    private $type_list = [
-        1=>'普通博文', 
-        2=>'图片相册', 
-        3=>'读后感', 
-        ];
+    protected $table = "Blog";
 
-    private $source_list = [
-        1=>'原创', 
-        2=>'转载', 
-        ];
+    protected $dateFormat = "U";
 
-    public function socpeFindUri($query, $uri){
+    public function scopeFindUser($query){
+        return $query->where('user_id', Auth::id());
+    }
+
+    public function scopeFindUri($query, $uri){
         return $query->where('uri', $uri);
+    }
+
+    public function getSourceName(){
+        return BlogConst::getValue('source_list', $this->source);
+    }
+
+    public function getCategoryName(){
+        return BlogConst::getValue('category_list', $this->category);
+    }
+
+    public function getBlogTypeName(){
+        return BlogConst::getValue('type_list', $this->blog_type);
+    }
+
+    public function getBlogUri(){
+        $uri = $this->id;
+        if ($this->uri) {
+            $uri = $this->uri;
+        }
+
+        return BlogConst::BLOG_DETAIL_PREFIX."/".$uri;
+    }
+
+    public function content(){
+        return $this->hasOne('App\Yooqin\Models\BlogContent'); 
+    }
+
+    public function user(){
+        return 1;
     }
 
 }

@@ -16,6 +16,7 @@
     <link href="{{ asset('static/amd/adm.css') }}" rel="stylesheet">
 
     @yield('css')
+    <script>window.YOOQIN = {'csrf_token' : '{{csrf_token()}}'};</script>
 
 	<!--[if lt IE 9]>
 	  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -95,10 +96,24 @@
 		<span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
 	</a>
 
-	
-	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-	<script src="{{ asset('static/bootstrap-3.3.7/js/bootstrap.min.js') }}"></script>
 
+    <!-- 通用模态框 -->
+	<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="message-small">
+    	<div class="modal-dialog modal-sm" role="document">
+      		<div class="modal-content">
+        		<div class="modal-header">
+          			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          			<h4 class="modal-title" id="mySmallModalLabel">消息提示</h4>
+        		</div>
+        		<div class="modal-body"></div>
+      		</div><!-- /.modal-content -->
+    	</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+		
+	<script src="{{ asset('static/jquery/jquery.min.js') }}"></script>
+	<script src="{{ asset('static/bootstrap-3.3.7/js/bootstrap.min.js') }}"></script>
+    
     @yield('js')
 
 	</body>

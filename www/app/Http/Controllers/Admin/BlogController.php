@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Yooqin\Creator\BlogCreator;
+use App\Yooqin\Models\Blog;
+use App\Yooqin\Decorator\BlogDecorator;
+use Validator;
 
 class BlogController extends Controller
 {
@@ -15,7 +18,10 @@ class BlogController extends Controller
      */
     public function index(Request $request)
     {
-        return view('admin.blog.index');
+        $blogs = Blog::findUser()->paginate(10);
+        $list = BlogDecorator::transformList($blogs);
+
+        return view('admin.blog.index')->with('list', $list);
     }
 
     /**
@@ -36,7 +42,10 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.blog.edit');
+        $blog = Blog::find($id);
+        $data = BlogDecorator::transform($blog);
+
+        return view('admin.blog.edit')->with('data', $data);
     }
 
     /**
@@ -47,6 +56,7 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
+
         try {
             $validator = Validator::make($request->all(),
                 [
@@ -61,7 +71,7 @@ class BlogController extends Controller
                 throw new \Exception($validator->errors()->first());
             }
 
-            $blog_id = app(Blog::class)->create($request);
+            $blog_id = app(BlogCreator::class)->create($request);
             if (!$blog_id) {
                 throw new \Exception('数据创建失败');
             }
@@ -110,7 +120,7 @@ class BlogController extends Controller
                 throw new \Exception($validator->errors()->first());
             }
 
-            $blog_id = app(Blog::class)->update($request);
+            $blog_id = app(BlogCreator::class)->update($request, $id);
             if (!$blog_id) {
                 throw new \Exception('数据创建失败');
             }
@@ -132,6 +142,18 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        return $this->jsonFailed('api not found');		
+        $blog = Blog::find($id);
+        if (!$blog) {
+            return $this->jsonFailed('未找到博客');		
+        }
+
+        if ($blog->user_id != Auth::id()) {
+            return $this->jsonFailed('博客作者本人才能删除');		
+        }
+
+        $ret = $blog->delete();
+
+        return $ret ? $this->jsonSuccess(['blog_id'=>$id]) : $this->jsonFailed('删除失败');	
+
     }
 }

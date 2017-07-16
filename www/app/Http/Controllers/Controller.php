@@ -11,7 +11,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    private function jsonFailed($message = '', $data = []){
+    public function jsonFailed($message = '', $data = []){
 
         $message = $message ? $message : 'failed';
 
@@ -23,7 +23,7 @@ class Controller extends BaseController
         return response()->json($result);
     }
 
-    private function jsonSuccess($data = [], $message = ''){
+    public function jsonSuccess($data = [], $message = ''){
 
         $message = $message ? $message : 'success';
         

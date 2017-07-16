@@ -10,7 +10,7 @@ create table Users(
     PRIMARY KEY(`id`),
     key `email_idx`(`email`),
     key `name_idx`(`name`)
-)engine=innodb charset=latin1;
+)engine=innodb charset=utf8;
 
 create table Blog(
     `id` int(10) unsigned not null AUTO_INCREMENT,
@@ -22,14 +22,14 @@ create table Blog(
     `views` int(10) unsigned not null comment '浏览总数',
     `source` tinyint(3) unsigned not null comment '1原创2转载',
     `blog_type` tinyint(3) unsigned not null comment '1博客2相册博客',
-    `deleted_at` int(10) unsigned not null comment '是否删除',
+    `deleted_at` int(10) unsigned default null comment '是否删除',
     `created_at` int(10) unsigned not null,
     `updated_at` int(10) unsigned not null,
     PRIMARY KEY(`id`),
     key `user_id_idx`(`user_id`),
     key `title_idx`(`title`, `keywords`),
     key `uri_idx`(`uri`)
-)engine=innodb charset=latin1 comment '博客实体表';
+)engine=innodb charset=utf8 comment '博客实体表';
 
 create table BlogContent(
     `id` int(10) unsigned not null AUTO_INCREMENT,
@@ -40,7 +40,7 @@ create table BlogContent(
     `updated_at` int(10) unsigned not null,
     PRIMARY KEY(`id`),
     key `blog_id_idx`(`blog_id`)
-)engine=innodb charset=latin1 comment '博客内容实体';
+)engine=innodb charset=utf8 comment '博客内容实体';
 
 
 create table Article(
@@ -59,7 +59,7 @@ create table Article(
     key `user_id_idx`(`user_id`),
     key `title_idx`(`title`, `keywords`),
     key `uri_idx`(`uri`)
-)engine=innodb charset=latin1 comment '文章实体表';
+)engine=innodb charset=utf8 comment '文章实体表';
 
 create table ArticleContent(
     `id` int(10) unsigned not null AUTO_INCRMENT,
@@ -70,7 +70,7 @@ create table ArticleContent(
     `updated_at` int(10) unsigned not null,
     PRIMARY KEY(`id`),
     key `article_id_idx`(`article_id`)
-)engine=innodb charset=latin1 comment '资讯内容实体';
+)engine=innodb charset=utf8 comment '资讯内容实体';
 
 
 create table Tag(
@@ -83,7 +83,7 @@ create table Tag(
     `updated_at` int(10) unsigned not null,
     PRIMARY KEY(`id`),
     key `uri_idx`(`uri`)
-)engine=innodb charset=latin1 commnet '标签库';
+)engine=innodb charset=utf8 commnet '标签库';
 
 create table TagTotal(
     `id` int(10) unsigned not null AUTO_INCREMENT,
@@ -94,7 +94,7 @@ create table TagTotal(
     `updated_at` int(10) unsigned not null,
     PRIMARY KEY(`id`),
     key `tag_id_idx`(`tag_id`)
-)engine=innodb charset=latin1 comment '标签数据统计';
+)engine=innodb charset=utf8 comment '标签数据统计';
 
 create table TagRelation(
     `id` int(10) unsigned not null AUTO_INCREMENT,
@@ -106,4 +106,4 @@ create table TagRelation(
     PRIMARY KEY(`id`),
     key `tag_id_idx` (`tag_id`),
     key `relation_id_idx` (`relation_id`)
-)engine=innodb charset=latin1 comment '标签数据统计';
+)engine=innodb charset=utf8 comment '标签数据统计';

@@ -7,7 +7,7 @@
     <nav class="category" role="navigation">
         <ul class="menu">
             <li class="presentation" role="presentation"><a href="/adm/blog">博客列表</a></li>
-            <li class="nav-current"><a href="/adm/blog/create">创建博客</a></li>
+            <li class="nav-current"><a href="/adm/blog/create">编辑博客</a></li>
         </ul>
     </nav>
 </div>
@@ -22,9 +22,13 @@
             <label class="col-sm-2 control-label">博客属性</label>
             <div class="col-sm-4">
                 <select class="form-control" name="category_id">
-                    <option value="1">互联网</option>
-                    <option value="2">服务器</option>
-                    <option value="3">编程技术</option>
+                    @foreach($category['category_list'] as $_item)
+                    <option value="{{$_item['id']}}" 
+                        @if ($_item['id'] == $data['category_id'])
+                        selected="selected"
+                        @endif
+                    >{{$_item['name']}}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="col-sm-1">
@@ -33,15 +37,25 @@
 
             <div class="col-sm-2">
                 <select class="form-control" name="source">
-                    <option value="1">源创</option>
-                    <option value="2">转载</option>
+                    @foreach($category['source_list'] as $_item)
+                    <option value="{{$_item['id']}}" 
+                        @if ($_item['id'] == $data['source'])
+                        selected="selected"
+                        @endif
+                    >{{$_item['name']}}</option>
+                    @endforeach
                 </select>
             </div>
 
             <div class="col-sm-2">
                 <select class="form-control" name="blog_type">
-                    <option value="1">Markdown博客</option>
-                    <option value="2">相册游记</option>
+                    @foreach($category['type_list'] as $_item)
+                    <option value="{{$_item['id']}}" 
+                        @if ($_item['id'] == $data['blog_type'])
+                        selected="selected"
+                        @endif
+                    >{{$_item['name']}}</option>
+                    @endforeach
                 </select>
             </div>
 

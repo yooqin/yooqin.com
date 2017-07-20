@@ -21,11 +21,29 @@ class BlogConst
         ];
 
     public static $category_list = [
-        1=>'编程技术',
-        2=>'服务器',
-        3=>'生活日志',
-        4=>'其他',
+        1=>'后端技术',
+        2=>'前端技术',
+        3=>'软件思想',
+        4=>'服务器',
+        5=>'观点感悟',
+        6=>'项目管理',
+        7=>'爱好者',
+        8=>'其他',
         ];
+
+    private static $lists = ['type_list', 'source_list', 'category_list'];
+
+    public static function getList(){
+        $list = [];
+        foreach (self::$lists as $_value) {
+            foreach (self::${$_value} as $_key=>$_name) {
+                $_arr['id'] = $_key;
+                $_arr['name'] = $_name;
+                $list[$_value][] = $_arr;
+            }
+        }
+        return $list;
+    }
 
     public static function getValue($list, $key){
         if (!$list || !$key) {
@@ -41,7 +59,6 @@ class BlogConst
         }
 
         return self::${$list}[$key];
-
     }
 
 }

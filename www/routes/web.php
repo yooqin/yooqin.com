@@ -11,8 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//index page
+Route::get('/', 'HomeController@index')->name('home');
+
+//Blog FE pages
+Route::Group(['namespace'=>'Blog'], function(){
+    Route::get('/blog', 'BlogController@index');
+    Route::get('/blog/show/{id}', 'BlogController@show');
+    Route::get('/blog/category/{id}', 'BlogController@category');
 });
 
 
@@ -23,13 +29,9 @@ Route::Group(['namespace' => 'Admin', 'middleware' => 'auth'], function() {
     Route::get('/adm/blog', 'BlogController@index');
     Route::get('/adm/blog/create', 'BlogController@create');
     Route::get('/adm/blog/{id}/edit', 'BlogController@edit');
-
 });
 
 
 
 //FrontEnd pages routes
-
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

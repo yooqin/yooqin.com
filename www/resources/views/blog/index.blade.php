@@ -16,9 +16,31 @@
 
 @section('main-content')
 
+<nav class="category" role="navigation">
+    <ul class="menu">
+        <li class="
+        @if (isset($current_category_id)) 
+            presentation
+        @else
+            nav-current
+        @endif
+        " role="presentation"><a href="/">全部博客</a></li>
+        @foreach($category_list as $_category)
+        <li class="
+        @if (isset($current_category_id) && $current_category_id == $_category['id']) 
+            nav-current
+        @else
+            presentation
+        @endif
+        "><a href="/blog/category/{{$_category['id']}}">{{$_category['name']}}</a></li>
+        @endforeach
+    </ul>
+</nav>
+
+@if (isset($data['list']))
 @foreach($data['list'] as $_item)
 <!-- begin article -->
-<article id="1" class="post">
+<article id="article_{{$_item['id']}}" class="post">
     <div class="post-head">
         <h1 class="post-title"><a href="{{$_item['blog_uri']}}">{{mb_strimwidth($_item['title'], 0, 36, '..')}}</a></h1>
         <div class="post-meta">
@@ -64,35 +86,33 @@
 </article>
 <!-- end article -->
 @endforeach
+@else
+<article class="post">
+* 分类下暂无数据
+</article>
+@endif
+
+
+<nav class="pagination-wrap" role="navigation">
+    {{$data['paginate']['links']}}
+</nav>
+
 @endsection
 
 @section('aside-content')
 <div class="widget">
-    <h4 class="title">介绍</h4>
-    <div class="content community">
-        <div class="row">
-            <div class="col-md-6"><a href="" class="btn btn-default btn-block btn-click-about">站点介绍</a></div>
-            <div class="col-md-6"><a href="" class="btn btn-default btn-block btn-click-contact">联系我们</a></div>
-        </div>
-    </div>
-</div>
-
-<!--
-<div class="widget">
-    <h4 class="title">最新资讯</h4>
+    <h4 class="title">最新博客</h4>
     <div class="content news">
+		@foreach($news['list'] as $_new)
         <div class="row">
-            <div class="col-md-8"><a href="">老司机奥卡福吉林市解放路</a></div>
-            <div class="col-md-4"><span class="date">2017-09-08</span></div>
+            <div class="col-md-8"><a href="{{$_new['uri']}}">{{mb_strimwidth($_new['title'], 0, 26, '..')}}</a></div>
+            <div class="col-md-4"><span class="date">{{mb_strimwidth($_new['created_date'], 0, 10)}}</span></div>
         </div>
-        <div class="row">
-            <div class="col-md-8"><a href="">老司机奥卡福吉林市解放路</a></div>
-            <div class="col-md-4"><span class="date">2017-09-08</span></div>
-        </div>
+		@endforeach
 
     </div>
 </div>
--->
+
 
 <div class="widget">
     <h4 class="title">分类</h4>
@@ -101,9 +121,9 @@
 		先放置category
 		-->
 		@foreach($category_list as $_item)
-        <a href="/category/{{$_item['id']}}">{{$_item['name']}}</a>
+        <a href="/blog/category/{{$_item['id']}}">{{$_item['name']}}</a>
 		@endforeach
-        <a href="/category">...</a>
+        <a href="/blog/category">...</a>
     </div>
 </div>
 
@@ -115,9 +135,12 @@
 		先放置category
 		-->
 		@foreach($tags as $_item)
-        <a href="/tag/{{$_item['id']}}">{{$_item['name']}}</a>
+        <a href="javascript:void(0);/tag/{{$_item['id']}}" class="btn_tag" data-name="{{$_item['name']}}">{{$_item['name']}}</a>
 		@endforeach
-        <a href="/tag">...</a>
+        <a href="/tag" class="btn_tag" data-name="更多">...</a>
     </div>
 </div>
+@endsection
+
+@section('js')
 @endsection

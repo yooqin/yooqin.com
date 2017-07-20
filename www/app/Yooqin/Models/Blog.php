@@ -28,7 +28,7 @@ class Blog extends Model
     }
 
     public function getCategoryName(){
-        return BlogConst::getValue('category_list', $this->category);
+        return BlogConst::getValue('category_list', $this->category_id);
     }
 
     public function getBlogTypeName(){
@@ -49,7 +49,11 @@ class Blog extends Model
     }
 
     public function user(){
-        return 1;
+        return $this->hasOne('App\User', 'id', 'user_id');
+    }
+
+    public function tags(){
+        return $this->hasMany('App\Yooqin\Models\TagRelation', 'relation_id', 'id');
     }
 
 }

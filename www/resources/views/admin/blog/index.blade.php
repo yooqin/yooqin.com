@@ -21,6 +21,7 @@
 		<tr>
 		  <th>#</th>
 		  <th>标题</th>
+		  <th>分类</th>
 		  <th>类型</th>
 		  <th>方式</th>
 		  <th>浏览数</th>
@@ -29,10 +30,12 @@
 		</tr>
 	  </thead>
 	  <tbody>
+        @if (!empty($list['list']))
         @foreach($list['list'] as $_item)
 		<tr>
 		  <th scope="row">{{$_item['id']}}</th>
 		  <td>{{$_item['title']}}</td>
+		  <td>{{$_item['category_name']}}</td>
 		  <td>{{$_item['type_name']}}</td>
 		  <td>{{$_item['source_name']}}</td>
 		  <td>{{$_item['views']}}</td>
@@ -44,6 +47,9 @@
 			</td>
 		</tr>
         @endforeach
+        @else
+        <tr><td>*没有博客</td></tr>
+        @endif
 	  </tbody>
 	</table>
 </div>

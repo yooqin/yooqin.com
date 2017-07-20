@@ -29,6 +29,9 @@ class BlogCreator{
         ]);
         $blog_content->save();
 
+        $tag = new TagCreator();
+        $tag->autoCreate(explode(",", $request->keywords), $blog_id);
+
         return $blog_id;
     }
 
@@ -66,6 +69,7 @@ class BlogCreator{
 
         $blog->user_id = Auth::id();
         $blog->title = $request->title;
+        $blog->category_id = $request->category_id;
         $blog->keywords = $request->keywords;
         $blog->description = $request->description;
         $blog->uri = $request->uri;

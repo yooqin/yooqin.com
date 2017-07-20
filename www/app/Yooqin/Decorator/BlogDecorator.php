@@ -20,6 +20,18 @@ class BlogDecorator
         $data['type_name'] = $item->getBlogTypeName();
         $data['category_name'] = $item->getCategoryName();
         $data['content'] = $item->content->toArray();
+        $data['user'] = $item->user;
+
+        $data['tags'] = [];
+
+        $tags = $item->tags;
+
+        if (!empty($tags)) {
+            foreach ($tags as $_t) {
+                $data['tags'][] = $_t->tag;
+            }
+        }
+        
 
         return $data;
 
@@ -43,7 +55,7 @@ class BlogDecorator
     }
 
     public static function getPaginate($items){
-        if (!method_exists($items, 'count')) {
+        if (!method_exists($items, 'currentPage')) {
             return []; 
         }
         $data = [];

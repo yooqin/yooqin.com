@@ -7,7 +7,9 @@ use App\Http\Controllers\Controller;
 use App\Yooqin\Creator\BlogCreator;
 use App\Yooqin\Models\Blog;
 use App\Yooqin\Decorator\BlogDecorator;
+use App\Yooqin\Consts\BlogConst;
 use Validator;
+use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller
 {
@@ -31,7 +33,10 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('admin.blog.create');
+
+        $category = BlogConst::getList();
+
+        return view('admin.blog.create')->with('category', $category);
     }
 
     /**
@@ -44,8 +49,9 @@ class BlogController extends Controller
     {
         $blog = Blog::find($id);
         $data = BlogDecorator::transform($blog);
+        $category = BlogConst::getList();
 
-        return view('admin.blog.edit')->with('data', $data);
+        return view('admin.blog.edit')->with('data', $data)->with('category', $category);
     }
 
     /**

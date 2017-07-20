@@ -27,6 +27,9 @@ class FooterComposer
 
         //热点
         $hot_blogs = BlogDecorator::transformList($blogs); 
+        if (!$hot_blogs) {
+            $hot_blogs['list'] = [];
+        }
 
         //分类
         $system_list = BlogConst::getList();

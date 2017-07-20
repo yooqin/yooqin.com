@@ -9,7 +9,7 @@
 @section('meta-title')
 {{$data['title']}}-(www.yooqin.com)优勤网
 @endsection
-@section('meta-descritpion')
+@section('meta-description')
 {{$data['description']}}
 @endsection
 @section('meta-keywords')

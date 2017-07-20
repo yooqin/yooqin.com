@@ -156,7 +156,11 @@
 	<div class="copyright">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12">Copyright@www.yooqin.com | <a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备15037850号-1</a></div>
+                <div class="col-sm-12">
+                    Copyright@www.yooqin.com | 
+                    <a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备15037850号-1</a>
+                    <script src="https://s22.cnzz.com/z_stat.php?id=1262983956&web_id=1262983956" language="JavaScript"></script>
+                </div>
 			</div>
 		</div>
 	</div>

@@ -1,2 +1,3 @@
 User-agent: *
-Disallow:
+Disallow: /adm
+Sitemap: http://www.yooqin.com/sitemap.xml

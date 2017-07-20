@@ -3,7 +3,7 @@
 
 @section('css')
 <link href="{{ asset('static/editor.md-master/css/editormd.preview.min.css') }}" rel="stylesheet">
-<link href="{{ asset('static/editor.md-master/css/fix_md.css') }}" rel="stylesheet">
+<link href="{{ asset('static/css/fix_md.css') }}" rel="stylesheet">
 @endsection
 
 @section('meta-title')

@@ -9,6 +9,7 @@
 
     var b = {
         _bindEvent:function(){
+
             var _this = this;
 
             $(function(){
@@ -24,7 +25,15 @@
                     _this._comment();    
                     return false;
                 });
+
+
+		//check msie
+		if (window.navigator.userAgent.indexOf("MSIE")>=1) {
+			message.failed("<h3>严正声明！</h3>本站不支持IE系列浏览器，请使用Chrome、Safari、Firefox~~~<br />Thanks");
+		}
+
             });
+
         },
         _tagShow:function(tag){
             message.failed("标签["+tag+"]不见啦，被你点坏啦~"); 

@@ -115,9 +115,9 @@
 		先放置category
 		-->
 		@foreach($tags as $_item)
-        <a href="/tag/{{$_item['id']}}">{{$_item['name']}}</a>
+        <a href="javascript:void(0);" class="btn_tag" data-name="{{$_item['name']}}">{{$_item['name']}}</a>
 		@endforeach
-        <a href="/tag">...</a>
+        <a href="javascript:void(0)" class="btn_tag" data-name="更多">...</a>
     </div>
 </div>
 @endsection

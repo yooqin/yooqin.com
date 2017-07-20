@@ -1,6 +1,5 @@
 @extends('layouts.yooqin')
 
-
 @section('meta-title')
 优勤网-yooqin.com
 @endsection
@@ -11,11 +10,7 @@
 优勤网,yooqin
 @endsection
 
-
-
-
 @section('main-content')
-
 <nav class="category" role="navigation">
     <ul class="menu">
         <li class="

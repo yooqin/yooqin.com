@@ -42,7 +42,10 @@ class BlogDecorator
             return [];
         }
 
-        $list = [];
+        $list = [
+		'list'=>[],
+		'paginate'=>[]
+		];
         foreach ($items as $_item) {
             $list['list'][] = self::transform($_item); 
         }

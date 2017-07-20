@@ -34,9 +34,11 @@ class FooterComposer
 
         $route_info = [];
         $r = Route::current();
-        $route_info['uri'] = $r->uri;
-        $route_info['controller'] = $r->action['controller'];
-        $route_info['namespace'] = $r->action['namespace'];
+        if ($r) {
+            $route_info['uri'] = $r->uri;
+            $route_info['controller'] = $r->action['controller'];
+            $route_info['namespace'] = $r->action['namespace'];
+        }
 
         $view->with('hot_blogs', $hot_blogs['list']);
         $view->with('category_list', $category_list);

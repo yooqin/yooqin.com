@@ -9,6 +9,8 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $table = 'Users';
+
     protected $dateFormat = 'U';
 
     /**

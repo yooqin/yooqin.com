@@ -586,3 +586,13 @@ main .comments .pagination-comments{
     }
 .post-news .tag-list .item .btn-click-share{font-size:1.6em; color:#ea6000;}
 
+
+.markdown-body img{
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 2em;
+    text-align: center;
+    max-width: 90%;
+    margin: 10px auto;
+	margin-left:5%;
+}

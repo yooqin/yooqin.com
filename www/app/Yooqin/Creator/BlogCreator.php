@@ -65,7 +65,7 @@ class BlogCreator{
 
     private function transform($request, Blog $blog){
 
-        
+        $views = isset($blog->views) ? $blog->views : BlogConst::DEFAULT_VIEWS;
 
         $blog->user_id = Auth::id();
         $blog->title = $request->title;
@@ -73,7 +73,7 @@ class BlogCreator{
         $blog->keywords = $request->keywords;
         $blog->description = $request->description;
         $blog->uri = $request->uri;
-        $blog->views = BlogConst::DEFAULT_VIEWS;
+        $blog->views = $views;
         $blog->source = $request->source;
         $blog->blog_type = $request->blog_type;
         $blog->deleted_at = null;

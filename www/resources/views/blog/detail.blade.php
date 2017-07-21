@@ -177,5 +177,4 @@
 @endsection
 
 @section('js')
-bb.bindEvent();
 @endsection

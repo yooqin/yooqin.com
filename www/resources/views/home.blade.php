@@ -1,21 +1,16 @@
 @extends('layouts.yooqin')
 
-
 @section('meta-title')
-优勤网-yooqin.com
+优勤网互联网技术学习社区 - 优勤网(yooqin.com)
 @endsection
 @section('meta-descritpion')
-优勤网的介绍
+优勤网互联网技术学习社区,专注于互联网技术、产品、方向讨论研究及各类技术学习记录，主要方向为PHP,服务器等后端技术-优勤网(yooqin.com)
 @endsection
 @section('meta-keywords')
-优勤网,yooqin
+php,互联网,mysql,服务器,产品,优勤网,yooqin,技术,秦伟,滕州
 @endsection
 
-
-
-
 @section('main-content')
-
 @foreach($data['list'] as $_item)
 <!-- begin article -->
 <article id="1" class="post">

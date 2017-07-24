@@ -1,13 +1,13 @@
 @extends('layouts.yooqin')
 
 @section('meta-title')
-优勤网-yooqin.com
+{{$current_category['title']}} - 优勤网互联网技术学习社区(www.yooqin.com)
 @endsection
 @section('meta-descritpion')
-优勤网的介绍
+{{$current_category['description']}} - 优勤网(www.yooqin.com)
 @endsection
 @section('meta-keywords')
-优勤网,yooqin
+{{$current_category['keywords']}}
 @endsection
 
 @section('main-content')

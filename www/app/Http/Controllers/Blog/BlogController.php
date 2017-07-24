@@ -49,11 +49,14 @@ class BlogController extends Controller
         $new_blogs = Blog::orderBy('id', 'desc')->paginate(10);
         $news = BlogDecorator::transformList($new_blogs);
 
+        $current_category = BlogConst::getValue('category_detail_list', $id);
+
 
         return view('blog.index')
             ->with('data', $data)
             ->with('tags', $tags)
             ->with('current_category_id', $id)
+            ->with('current_category', $current_category)
             ->with('news', $news);
     }
 

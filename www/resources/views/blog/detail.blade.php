@@ -7,13 +7,13 @@
 @endsection
 
 @section('meta-title')
-{{$data['title']}}-(www.yooqin.com)优勤网
+{{$data['title']}} - 优勤网(www.yooqin.com)
 @endsection
 @section('meta-description')
-{{$data['description']}}
+{{trim($data['description'])}}
 @endsection
 @section('meta-keywords')
-{{$data['keywords']}}
+{{trim($data['keywords'])}}
 @endsection
 
 

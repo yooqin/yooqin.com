@@ -8,237 +8,230 @@
 
 <url>
   <loc>http://www.yooqin.com/</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
   <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
 </url>
 <url>
   <loc>http://www.yooqin.com/blog</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
   <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.yooqin.com/blog/show/yooqin_with_bugs</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
   <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/13_weeks_10_km_running_plan</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/vim_phpstrom_colors</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/javascript_amd</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/git_flow</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/shell_coding_3</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/shell_coding_2</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/shell_coding_1</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/shell_interaction_in_three_ways</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/9</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/17</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/16</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/18</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/10</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/15</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/14</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/category/1</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/category/2</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/category/3</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/category/4</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/category/5</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/category/6</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/category/7</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.yooqin.com/blog/category/8</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
   <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/13_weeks_10_km_running_plan</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/category/7</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/vim_phpstrom_colors</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/category/6</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/javascript_amd</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/category/2</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/git_flow</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/category/1</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/shell_coding_3</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/shell_coding_2</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/shell_coding_1</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/shell_interaction_in_three_ways</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/category/4</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/9</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/17</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/16</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/18</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/10</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/15</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/14</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/category/3</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/category/5</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.yooqin.com/login</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
   <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.yooqin.com/register</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
   <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.yooqin.com/blog?page=2</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
   <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/how_to_use_xdebug</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/install_xdebug</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/category/yooqin_with_bugs</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/category/13_weeks_10_km_running_plan</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/category/vim_phpstrom_colors</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/category/javascript_amd</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/category/git_flow</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/category/shell_coding_3</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/category/shell_coding_2</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/category/shell_coding_1</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/category/shell_interaction_in_three_ways</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/mysql_charset</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/mysql_create_user</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/create_git_server</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/centos_install_php_nginx</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.yooqin.com/blog/show/vagrant</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://www.yooqin.com/blog/show/writing_technical_articles</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
   <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/how_to_use_xdebug</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/install_xdebug</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/mysql_charset</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/mysql_create_user</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/create_git_server</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/centos_install_php_nginx</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.yooqin.com/blog/show/vagrant</loc>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://www.yooqin.com/blog?page=1</loc>
-  <lastmod>2017-07-24T13:02:16+00:00</lastmod>
+  <lastmod>2017-07-24T14:21:15+00:00</lastmod>
   <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
 </url>
 </urlset>

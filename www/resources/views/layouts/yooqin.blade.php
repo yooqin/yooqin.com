@@ -145,6 +145,7 @@
 						<a href="http://www.xingdong365.com/" target="_blank">Action365博客</a>
 						<a href="http://www.pksafe.cn/" target="_blank">键盘上的小飞侠</a>
 						<a href="http://www.viphper.com" target="_blank">飞飞</a>
+						<a href="http://www.yooqin.com" target="_blank">滕州·秦伟</a>
 					</div>
 				</div>
 

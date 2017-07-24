@@ -64,7 +64,7 @@
             <a href="javascript:void(0);">无</a>
             @endif
             <span class="glyphicon glyphicon-folder-open s20" aria-hidden="true"></span>
-            <a href="/category/{{$_item['category_id']}}">{{$_item['category_name']}}</a>
+            <a href="/blog/category/{{$_item['category_id']}}">{{$_item['category_name']}}</a>
             <span class="glyphicon glyphicon-star s20 yellow" aria-hidden="true"></span>
             <a href="javascript:void(0);">{{$_item['views']}}</a>
         </div>

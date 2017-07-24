@@ -28,10 +28,14 @@ class BlogController extends Controller
 
         $tags = Tag::take(20)->get();
 
+
+        $current_category = BlogConst::getValue('category_detail_list', 1000);
+
         return view('blog.index')
             ->with('data', $data)
             ->with('tags', $tags)
-            ->with('news', $news);
+            ->with('news', $news)
+            ->with('current_category', $current_category);
     }
 
     public function category($id){
@@ -50,10 +54,6 @@ class BlogController extends Controller
         $news = BlogDecorator::transformList($new_blogs);
 
         $current_category = BlogConst::getValue('category_detail_list', $id);
-        if (empty($current_category)) {
-            $current_category = BlogConst::getValue('category_detail_list', 1000);
-        }
-
 
         return view('blog.index')
             ->with('data', $data)

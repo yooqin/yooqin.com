@@ -1,14 +1,8 @@
 @extends('layouts.yooqin')
 
-@section('meta-title')
-{{$current_category['title']}} - 优勤网互联网技术学习社区(www.yooqin.com)
-@endsection
-@section('meta-descritpion')
-{{$current_category['description']}} - 优勤网(www.yooqin.com)
-@endsection
-@section('meta-keywords')
-{{$current_category['keywords']}}
-@endsection
+@section('meta-title'){{$current_category['title']}} - 优勤网互联网技术学习社区(www.yooqin.com)@endsection
+@section('meta-description'){{$current_category['description']}} - 优勤网(www.yooqin.com)@endsection
+@section('meta-keywords'){{$current_category['keywords']}}@endsection
 
 @section('main-content')
 <nav class="category" role="navigation">

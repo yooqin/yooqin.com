@@ -50,6 +50,9 @@ class BlogController extends Controller
         $news = BlogDecorator::transformList($new_blogs);
 
         $current_category = BlogConst::getValue('category_detail_list', $id);
+        if (empty($current_category)) {
+            $current_category = BlogConst::getValue('category_detail_list', 1000);
+        }
 
 
         return view('blog.index')

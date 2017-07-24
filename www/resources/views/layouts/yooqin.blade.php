@@ -148,6 +148,7 @@
 					<div class="content tag-cloud">
 						<a href="/sitemap.html" target="_blank">sitemap.html</a>
 						<a href="/sitemap.xml" target="_blank">sitemap.xml</a>
+						<a href="/urllist.txt" target="_blank">urllist.txt</a>
 					</div>
 				</div>
 

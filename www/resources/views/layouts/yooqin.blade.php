@@ -132,10 +132,26 @@
 						<a href="/blog/category/{{$_item['id']}}">{{$_item['name']}}</a>
                         @endforeach
 						<a href="/category">...</a>
-						<a href="/login">注册</a>
-						<a href="/register">登录</a>
 					</div>
 				</div>
+
+                <div class="widget">
+					<h4 class="title">功能</h4>
+					<div class="content tag-cloud">
+						<a href="/login">登录</a>
+						<a href="/register">注册</a>
+					</div>
+				</div>
+
+                <div class="widget">
+					<h4 class="title">Sitemap</h4>
+					<div class="content tag-cloud">
+						<a href="/sitemap.html" target="_blank">sitemap.html</a>
+						<a href="/sitemap.xml" target="_blank">sitemap.xml</a>
+					</div>
+				</div>
+
+
 			</div>	
 			<div class="col-sm-4">
 				<div class="widget">

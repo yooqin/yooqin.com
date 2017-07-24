@@ -6,15 +6,9 @@
 <link href="{{ asset('static/css/fix_md.css') }}" rel="stylesheet">
 @endsection
 
-@section('meta-title')
-{{$data['title']}} - 优勤网(www.yooqin.com)
-@endsection
-@section('meta-description')
-{{trim($data['description'])}}
-@endsection
-@section('meta-keywords')
-{{trim($data['keywords'])}}
-@endsection
+@section('meta-title'){{$data['title']}} - 优勤网(www.yooqin.com)@endsection
+@section('meta-description'){{trim($data['description'])}}@endsection
+@section('meta-keywords'){{trim($data['keywords'])}}@endsection
 
 
 

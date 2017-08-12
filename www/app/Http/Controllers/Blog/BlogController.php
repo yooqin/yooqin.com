@@ -74,7 +74,7 @@ class BlogController extends Controller
         }
 
         $blog->views += 1;
-        $blog->updated_ts = $blog->updated_ts;
+        $blog->updated_at = $blog->updated_at;
         $blog->save();
         $data = BlogDecorator::transform($blog);
         $tags = Tag::take(20)->get();

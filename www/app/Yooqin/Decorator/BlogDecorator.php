@@ -12,7 +12,7 @@ class BlogDecorator
 
         $data = [];
         $data = $item->toArray();
-        $data['created_date'] = self::getDate($data['created_at']);
+        $data['created_date'] = self::getDate($data['updated_at']);
 
         $data['blog_uri'] = $item->getBlogUri();
         //$data['user'] = $item->user;

@@ -117,7 +117,7 @@
 					<div class="content recent-post">
                         @foreach($hot_blogs as $_item)
 						<div class="recent-single-post">
-							<a href="/blog/show/{{$_item['id']}}" class="post-title">{{$_item['title']}}</a>
+							<a href="{{$_item['blog_uri']}}" class="post-title">{{$_item['title']}}</a>
 							<div class="date">{{$_item['created_date']}}</div>
 						</div>
                         @endforeach

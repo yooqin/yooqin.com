@@ -30,7 +30,7 @@
         <div class="post-meta">
             <span class="author">作者: <a href="javascript:void(0);">{{$data['user']['name']}}</a></span>
             <time class="post-date" datetime="{{$data['created_date']}}" title="{{$data['created_date']}}">发布: {{$data['created_date']}}</time>
-            <time class="post-update-date" datetime="{{$data['init_created_date']}}" title="{{$data['init_created_date']}}">原始发布: {{$data['init_created_date']}}</time>
+            <time class="post-update-date" datetime="{{$data['updated_date']}}" title="{{$data['updated_date']}}">更新时间: {{$data['updated_date']}}</time>
         </div>
     </div>
     <div class="post-content markdown-body">

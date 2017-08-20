@@ -181,3 +181,26 @@ create table TagRelation(
     key `tag_id_idx` (`tag_id`),  
     key `relation_id_idx` (`relation_id`)  
 )engine=innodb charset=latin1 comment '标签数据统计';  
+
+
+## 评论
+create table Comments(
+    `id` int(10) unsigned not null AUTO_INCREMENT,
+    `user_id` int(10) unsigned not null,
+    `document_id` int(10) unsigned not null comment '文档ID',
+    `fid` int(10) unsigned not null,
+    `comment_type` tinyint(3) unsigned not null,
+    `name` char(32) default null,
+    `communication` varchar(256) not null,
+    `title` varchar(256) default null,
+    `content` text not null,
+    `destroy_at` int(10) unsigned not null,
+    `created_at` int(10) unsigned not null,
+    `updated_at` int(10) unsigned not null,
+    PRIMARY KEY(`id`),
+    key `user_id_idx` (`user_id`),
+    key `document_id_idx` (`document_id`),
+    key `fid_idx` (`fid`),
+    key `comment_type_idx` (`comment_type`)
+)engine=innodb charset=latin1 comment '评论';
+

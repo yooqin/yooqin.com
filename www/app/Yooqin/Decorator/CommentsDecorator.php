@@ -4,35 +4,26 @@ namespace App\Yooqin\Decorator;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth; 
+use App\User;
 
-class BlogDecorator
+class CommentsDecorator
 {
 
     public static function transform($item){
 
         $data = [];
         $data = $item->toArray();
+
         $data['created_date'] = self::getDate($data['created_at']);
-        $data['updated_date'] = self::getDate($data['updated_at']);
 
-        $data['blog_uri'] = $item->getBlogUri();
-        //$data['user'] = $item->user;
-        $data['source_name'] = $item->getSourceName();
-        $data['type_name'] = $item->getBlogTypeName();
-        $data['category_name'] = $item->getCategoryName();
-        $data['content'] = $item->content->toArray();
-        $data['user'] = $item->user;
-
-        $data['tags'] = [];
-
-        $tags = $item->tags;
-
-        if (!empty($tags)) {
-            foreach ($tags as $_t) {
-                $data['tags'][] = $_t->tag;
-            }
+        $data['user'] = [
+            'username'=>'匿名' 
+            ];
+        if ($data['user_id']) {
+            //获取用户信息
+            $user = User::find($data['user_id']);
+            $data['user']['username'] = $user->name;
         }
-        
 
         return $data;
 

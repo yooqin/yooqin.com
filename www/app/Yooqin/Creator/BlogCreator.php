@@ -49,6 +49,7 @@ class BlogCreator{
             }
         }
 
+        $blog->updated_at = time();
         $blog_id = $this->transform($request, $blog);
         if (!$blog_id) {
             throw new \Exception("数据更新失败"); 

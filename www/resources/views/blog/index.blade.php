@@ -94,7 +94,7 @@
     <div class="content news">
 		@foreach($news['list'] as $_new)
         <div class="row">
-            <div class="col-md-8"><a href="{{$_new['uri']}}">{{mb_strimwidth($_new['title'], 0, 26, '..')}}</a></div>
+            <div class="col-md-8"><a href="{{$_new['blog_uri']}}">{{mb_strimwidth($_new['title'], 0, 26, '..')}}</a></div>
             <div class="col-md-4"><span class="date">{{mb_strimwidth($_new['created_date'], 0, 10)}}</span></div>
         </div>
 		@endforeach

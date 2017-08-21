@@ -207,16 +207,16 @@
                             <tr><th>时间</th><th>事件</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>2015-02-03</td><td>www.yooqin.com域名注册</td></tr>
+                            <tr><td>2015-02-03</td><td>www.yooqin.com 域名注册</td></tr>
                             <tr><td>2015-05-03</td><td>优勤博客上线</td></tr>
                             <tr><td>2017-02-03</td><td>优勤网上线</td></tr>
-                            <tr><td>2017-10-03</td><td>访问量突破1000人次</td></tr>
+                            <tr><td>2017-10-03</td><td>访问量突破1***人次</td></tr>
                         </tbody>
                     </table>
                     <h5>主创人员</h5>
                     <div class="row about-people">
                         <div class="col-sm-4"><img src="{{ asset('static/images/head-qin.png') }}" alt="yooqin" class="img-circle" width="60px"></div>
-                        <div class="col-sm-4">秦伟</div>
+                        <div class="col-sm-4">秦**</div>
                         <div class="col-sm-4">服务端开发工程师</div>
                     </div>
                     <div class="row about-people">
@@ -246,9 +246,7 @@
                             <tr><th>类型</th><th>用户名</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>邮箱</td><td>290191007@qq.com</td></tr>
-                            <tr><td>Wechat</td><td>yooqin</td></tr>
-                            <tr><td>QQ</td><td>290191007</td></tr>
+                            <tr><td>邮箱</td><td>yooqin@gmail.com</td></tr>
                             <tr><td>web</td><td>www.yooqin.com</td></tr>
                             <tr><td>地址</td><td>北京 海淀</td></tr>
                         </tbody>

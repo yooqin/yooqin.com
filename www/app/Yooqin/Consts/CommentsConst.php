@@ -2,7 +2,7 @@
 
 namespace App\Yooqin\Consts;
 
-class BlogConst
+class CommentsConst
 {
     const TYPE_BLOG = 1;
     const TYPE_NEWS = 2;
@@ -12,6 +12,12 @@ class BlogConst
         self::TYPE_BLOG=>'博客', 
         self::TYPE_NEWS=>'新闻资讯', 
         self::TYPE_WEBSITE=>'网站', 
+        ];
+
+    public static $type_alias_list = [
+        'blog'=>self::TYPE_BLOG,
+        'news'=>self::TYPE_NEWS,
+        'website'=>SELF::TYPE_WEBSITE
         ];
 
 
@@ -31,15 +37,15 @@ class BlogConst
 
     public static function getValue($list, $key){
         if (!$list || !$key) {
-            return '';
+            return false;
         }
 
         if (empty(self::${$list})) {
-            return '';
+            return false;
         }
 
         if (!self::${$list}[$key]) {
-            return '';
+            return false;
         }
 
         return self::${$list}[$key];

@@ -30,6 +30,7 @@
                 url:options.url,
                 type:options.type, 
                 data:options.data,
+                cache:false,
                 dataType:options.dataType
             }).then(function(res){
                 dfd.resolve(res);

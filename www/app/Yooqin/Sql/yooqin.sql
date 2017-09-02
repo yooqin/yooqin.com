@@ -111,3 +111,23 @@ create table TagRelation(
     key `tag_id_idx` (`tag_id`),
     key `relation_id_idx` (`relation_id`)
 )engine=innodb charset=utf8 comment '标签数据统计';
+
+CREATE TABLE `Comments` (
+      `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+      `user_id` int(10) unsigned NOT NULL,
+      `document_id` int(10) unsigned NOT NULL COMMENT '文档ID',
+      `fid` int(10) unsigned NOT NULL,
+      `comment_type` tinyint(3) unsigned NOT NULL,
+      `name` char(32) DEFAULT NULL,
+      `communication` varchar(256) NOT NULL,
+      `title` varchar(256) DEFAULT NULL,
+      `content` text NOT NULL,
+      `deleted_at` int(10) unsigned default null,
+      `created_at` int(10) unsigned NOT NULL,
+      `updated_at` int(10) unsigned NOT NULL,
+      PRIMARY KEY (`id`),
+      KEY `user_id_idx` (`user_id`),
+      KEY `document_id_idx` (`document_id`),
+      KEY `fid_idx` (`fid`),
+      KEY `comment_type_idx` (`comment_type`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='评论';

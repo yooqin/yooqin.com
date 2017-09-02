@@ -4,24 +4,17 @@ namespace App\Yooqin\Creator;
 
 use Illuminate\Http\Request;
 use App\Yooqin\Models\Comments;
-use App\Yooqin\Consts\CommentsCont;
+use App\Yooqin\Consts\CommentsConst;
 use Illuminate\Support\Facades\Auth;
 
 class CommentsCreator{
 
-    private $comment_type = 1;
-
-    public function __construct($type = false){
-        if (!$type) {
-            $this->comment_type = CommentsConst::TYPE_BLOG;
-        } else {
-            $this->comment_type = $type;
-        }
-    }
-    
     public function create(Request $request){
-
         $comment = new Comments(); 
+        $request->type_id = CommentsConst::getValue('type_alias_list', $request->type);
+        if (!$request->type) {
+            throw new \Exception('未支持的评论类型.'); 
+        }
         $comment_id = $this->transform($request, $comment);
         if (!$comment_id){
             throw new \Exception('保存失败');
@@ -32,11 +25,11 @@ class CommentsCreator{
 
     public function update(Request $request, $comment_id){
         $comment = Comments::firstOrNew(['id'=>$comment_id]);
-
         if ($comment->user_id != Auth::id() || !Auth::id()) {
             throw new \Exception('只有作者自己能够修改');
         }
 
+        $request->type_id = $comment->comment_type;
         $comment_id = $this->transform($request, $comment);
         if (!$comment_id) {
             throw new \Exception("数据更新失败"); 
@@ -56,12 +49,12 @@ class CommentsCreator{
         $comment->user_id = $user_id;
         $comment->document_id = $request->document_id;
         $comment->fid = $fid;
-        $comment->comment_type = $this->comment_type;
+        $comment->comment_type = $request->type_id;
         $comment->name = $name;
         $comment->communication = $communication;
         $comment->title = $title;
         $comment->content = $request->content;
-        $reg = $comment->save();
+        $ret = $comment->save();
 
         return $ret ? $comment->id : $ret;
     }

@@ -21,6 +21,13 @@ Route::Group(['namespace'=>'Blog'], function(){
     Route::get('/blog/category/{id}', 'BlogController@category');
 });
 
+Route::Group(['namespace'=>'Comment'], function(){
+
+    Route::get('/comments', 'CommentController@comments');
+
+    Route::resource('/comment', 'CommentController');
+});
+
 
 //BackEnd pages routes
 Route::Group(['namespace' => 'Admin', 'middleware' => 'auth'], function() {

@@ -16,14 +16,20 @@ class CommentsDecorator
 
         $data['created_date'] = self::getDate($data['created_at']);
 
-        $data['user'] = [
-            'username'=>'匿名' 
-            ];
-        if ($data['user_id']) {
+        $data['contact'] = substr_replace($data['communication'], '***', 3, 6);
+        unset($data['communication']);
+
+        $data['local'] = "****"; 
+        $data['show_name'] = "";
+        if (!$data['user_id']) {
+            $data['show_name'] = "匿名-".$data['name'];
+        } else {
             //获取用户信息
             $user = User::find($data['user_id']);
-            $data['user']['username'] = $user->name;
+            $data['show_name'] = $data['name']."(".$user->name.")";
         }
+
+        $data['content'] = mb_strimwidth($data['content'], 0, 500, '..');
 
         return $data;
 

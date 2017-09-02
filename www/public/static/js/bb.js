@@ -3,7 +3,7 @@
     var default_options = {
         btn:{
             tag:'.btn_tag', 
-            comment:'.btn-click-post-comments'
+            comment:'.btn-click'
         },
     };
 
@@ -19,13 +19,6 @@
                     _this._tagShow(tag);    
                     return false;
                 });
-
-                //comments
-                $(default_options.btn.comment).click(function(){
-                    _this._comment();    
-                    return false;
-                });
-
 
 		//check msie
 		if (window.navigator.userAgent.indexOf("MSIE")>=1) {

@@ -1,6 +1,5 @@
 @extends('layouts.yooqin')
 
-
 @section('css')
 <link href="{{ asset('static/editor.md-master/css/editormd.preview.min.css') }}" rel="stylesheet">
 <link href="{{ asset('static/css/fix_md.css') }}" rel="stylesheet">
@@ -61,70 +60,7 @@
 <!-- end article -->
 
 <div class="comments clearfix">
-    <form class="form-horizontal">
-        <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">姓名</label>
-            <div class="col-sm-10">
-                <input type="name" class="form-control" id="name" placeholder="姓名 / 昵称 / 匿名">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">联系方式</label>
-            <div class="col-sm-10">
-                <input type="contact" class="form-control" id="contact" placeholder="Email / QQ / 微信">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">评论内容</label>
-            <div class="col-sm-10">
-                <textarea class="form-control" rows="3" name="content"></textarea> 
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default btn-click-post-comments">提交评论</button>
-            </div>
-        </div>
-    </form>
-	<div class="comment">
-		* 暂无评论
-	</div>
-	<!--
-    <div class="comment">
-            <p class="comment-fe">
-            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-            秦伟
-            <span class="glyphicon glyphicon-phone l20" aria-hidden="true"></span>
-            2901****com
-            <span class="glyphicon glyphicon-globe l20" aria-hidden="true"></span>
-            中国 北京
-            <span class="glyphicon glyphicon-time l20" aria-hidden="true"></span>
-            2017-09-12 12:11:29
-            </p>
-            <p class="comment-content">服务器上同时运行php5.3和php7.2如何自由切换?</p>
-    </div>
-    <nav class="pagination-comments">
-        <ul class="pagination pagination-sm">
-            <li>
-              <a href="#" aria-label="Previous">
-                <span aria-hidden="true">«</span>
-              </a>
-            </li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li>
-              <a href="#" aria-label="Next">
-                <span aria-hidden="true">»</span>
-              </a>
-            </li>
-          </ul>    
-    </nav>
-	-->
-
-    
+    @include('comments.comments')
 </div>
 @endsection
 
@@ -156,7 +92,6 @@
     </div>
 </div>
 
-
 <div class="widget">
     <h4 class="title">标签云</h4>
     <div class="content tag-cloud">
@@ -172,4 +107,16 @@
 @endsection
 
 @section('js')
+<script src="/static/js/xhr.js"></script>
+<script src="/static/js/message.js"></script>
+<script src="/static/js/comments.js"></script>
+<script type="text/javascript">
+    Comments.bindEvent({
+        type:'blog',
+        document_id:{{$data['id']}},
+        btns:{reply:'.btn-click-post-comments'}
+    });
+
+    Comments.getList();
+</script>
 @endsection

@@ -13,6 +13,7 @@
 
 	<!-- Bootstrap -->
     <link href="{{ asset('static/bootstrap-3.3.7/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('static/libs/sweetalert/sweetalert.css') }}" rel="stylesheet">
     <link href="{{ asset('static/css/core.css') }}" rel="stylesheet">
     @yield('css')
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -69,6 +70,13 @@
                             presentation
                             @endif
                             "><a href="/blog">博客</a></li>
+                            <li class="
+                            @if(strpos($route_info['uri'], 'comments') !== false)
+                            nav-current
+                            @else
+                            presentation
+                            @endif
+                            "><a href="/comments">啦呱</a></li>
                             <!--
 							<li class="presentation"><a href="news.html">资讯</a></li>
 							<li class="presentation"><a href="tags.html">标签库</a></li>
@@ -297,6 +305,7 @@
     <!-- modal end -->
     <script src="{{ asset('static/jquery/jquery.min.js') }}"></script>
 	<script src="{{ asset('static/bootstrap-3.3.7/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('static/libs/sweetalert/sweetalert.min.js') }}"></script>
 	<script src="{{ asset('static/js/message.js') }}"></script>
 	<script src="{{ asset('static/js/yooqin.js') }}"></script>
 	<script src="{{ asset('static/js/bb.js') }}"></script>

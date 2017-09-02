@@ -20,7 +20,9 @@ class BlogController extends Controller
      */
     public function index(Request $request)
     {
-        $blogs = Blog::findUser()->paginate(10);
+        $blogs = Blog::findUser()
+            ->orderBy('id', 'desc')
+            ->paginate(10);
         $list = BlogDecorator::transformList($blogs);
 
         return view('admin.blog.index')->with('list', $list);

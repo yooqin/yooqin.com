@@ -14,7 +14,7 @@
     <link href="{{ asset('static/bootstrap-3.3.7/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('static/css/core.css') }}" rel="stylesheet">
     <link href="{{ asset('static/amd/adm.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('static/libs/sweetalert/sweetalert.css') }}" rel="stylesheet">
     @yield('css')
     <script>window.YOOQIN = {'csrf_token' : '{{csrf_token()}}'};</script>
 
@@ -113,7 +113,7 @@
 		
 	<script src="{{ asset('static/jquery/jquery.min.js') }}"></script>
 	<script src="{{ asset('static/bootstrap-3.3.7/js/bootstrap.min.js') }}"></script>
-    
+	<script src="{{ asset('static/libs/sweetalert/sweetalert.min.js') }}"></script>
     @yield('js')
 
 	</body>

@@ -34,7 +34,7 @@
         @foreach($list['list'] as $_item)
 		<tr>
 		  <th scope="row">{{$_item['id']}}</th>
-		  <td>{{$_item['title']}}</td>
+		  <td><a href="{{$_item['blog_uri']}}" target="_blank">{{$_item['title']}}</a></td>
 		  <td>{{$_item['category_name']}}</td>
 		  <td>{{$_item['type_name']}}</td>
 		  <td>{{$_item['source_name']}}</td>

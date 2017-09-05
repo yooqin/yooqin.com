@@ -26,7 +26,7 @@
                 title:'',
                 text:title,
                 type:'error',
-                closeOnConfirm:true
+                closeOnConfirm:true,
             },
             function(){
                 if (typeof(callback) == 'function') {

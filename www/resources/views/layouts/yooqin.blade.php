@@ -172,6 +172,7 @@
 						<a href="http://www.viphper.com" target="_blank">飞飞</a>
 						<a href="http://www.yooqin.com" target="_blank">滕州·秦伟</a>
                         <a href="http://lusongsong.com/" target="_blank">卢松松博客</a>
+                        <a href="https://blog.iinu.com.cn/" target="_blank">新太潮流</a>
 					</div>
 				</div>
 

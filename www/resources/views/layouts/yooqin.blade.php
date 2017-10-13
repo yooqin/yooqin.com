@@ -219,19 +219,13 @@
                             <tr><td>2015-02-03</td><td>www.yooqin.com 域名注册</td></tr>
                             <tr><td>2015-05-03</td><td>优勤博客上线</td></tr>
                             <tr><td>2017-02-03</td><td>优勤网上线</td></tr>
-                            <tr><td>2017-10-03</td><td>访问量突破1***人次</td></tr>
                         </tbody>
                     </table>
                     <h5>主创人员</h5>
                     <div class="row about-people">
-                        <div class="col-sm-4"><img src="{{ asset('static/images/head-qin.png') }}" alt="yooqin" class="img-circle" width="60px"></div>
-                        <div class="col-sm-4">秦**</div>
-                        <div class="col-sm-4">服务端开发工程师</div>
-                    </div>
-                    <div class="row about-people">
                         <div class="col-sm-4"><img src="{{ asset('static/images/head-qinqin.png') }}" alt="Sopha" class="img-circle" width="60px"></div>
                         <div class="col-sm-4">SophaQin</div>
-                        <div class="col-sm-4">She said it was a secret</div>
+                        <div class="col-sm-4">Secret</div>
                     </div>
                 </div>
                 <div class="modal-footer">

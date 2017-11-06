@@ -100,7 +100,6 @@ class SportService
             $total = $run+$bike+$qixie;
 
             $total = $total < 1 ? 1 : $total;
-            $total = $total >= 5 ? 5 : $total;
             $total = floor($total);
 
 

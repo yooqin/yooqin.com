@@ -105,11 +105,7 @@ class SportService
 
 
             $tt = strtotime($_day);
-            for ($i=0; $i<$total; $i++) {
-                $tt += 100;
-                $list[$tt] = $total;
-            }
-            
+            $list[$tt] = $total;
         }
 
         return $list;

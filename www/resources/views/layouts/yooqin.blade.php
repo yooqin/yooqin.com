@@ -77,6 +77,13 @@
                             presentation
                             @endif
                             "><a href="/comments">啦呱</a></li>
+                            <li class="
+                            @if(strpos($route_info['uri'], 'dashboard') !== false)
+                            nav-current
+                            @else
+                            presentation
+                            @endif
+                            "><a href="/dashboard">SportsBoard</a></li>
                             <!--
 							<li class="presentation"><a href="news.html">资讯</a></li>
 							<li class="presentation"><a href="tags.html">标签库</a></li>

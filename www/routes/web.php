@@ -22,10 +22,15 @@ Route::Group(['namespace'=>'Blog'], function(){
 });
 
 Route::Group(['namespace'=>'Comment'], function(){
-
     Route::get('/comments', 'CommentController@comments');
-
     Route::resource('/comment', 'CommentController');
+});
+
+Route::Group(['namespace'=>'Dashboard'], function(){
+    Route::get('/dashboard', 'DashboardController@index');
+    Route::post('/dashboard', 'DashboardController@store');
+    Route::get('/dashboard/record', 'DashboardController@getRecord');
+    Route::get('/dashboard/list', 'DashboardController@getList');
 });
 
 

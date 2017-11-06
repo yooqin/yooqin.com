@@ -78,10 +78,10 @@ class SportService
                         $max = floor($_item->distance / 2); 
                         break;
                     case 2 :
-                        $max = floor($_item->distance / 15); 
+                        $max = floor($_item->distance / 20); 
                         break;
                     case 3 :
-                        $max = floor($_item->distance / 15); 
+                        $max = floor($_item->distance / 20); 
                         break;
                 }
 

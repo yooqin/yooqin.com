@@ -210,7 +210,7 @@ var cal = new CalHeatMap();
 		range:6,
 		domainGutter:6,
         tooltip:true,
-        legend:[3, 6, 10, 20],
+        legend:[1, 2, 3, 5],
         domainDynamicDimension:true,
         data:'/dashboard/record?<?php echo "start={{d:start}}&stop={{d:end}}";?>'	
 	});

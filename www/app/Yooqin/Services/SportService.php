@@ -71,9 +71,24 @@ class SportService
         $list = [];
         if ($records) {
             foreach ($records as $_item) {
-                $_arr = [];
                 $ts = $_item->time ? $_item->time : $_item->created_at;
-                $list[$ts] = $_item->distance;
+                $max = 0;
+                switch($_item->type){
+                    case 1 :
+                        $max = floor($_item->distance / 2); 
+                        break;
+                    case 2 :
+                        $max = floor($_item->distance / 15); 
+                        break;
+                    case 3 :
+                        $max = floor($_item->distance / 15); 
+                        break;
+                }
+
+                for ($i=0; $i<$max; $i++) {
+                    $list[$ts] = $_item->distance;
+                    $ts += 100;
+                }
             }
         }
         return $list;

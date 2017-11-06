@@ -99,7 +99,7 @@ padding:4px;
             </td>
           <td>
             @if ($_item['type'] == 3)
-            {{$_item['distance'] * 10}}分钟
+            {{$_item['distance']}}分钟
             @else 
             0
             @endif
@@ -131,7 +131,7 @@ padding:4px;
         </select>
     </div>
     <div>
-        <span>Distance/Minutes:</span><input type="input" name="distance" value="5" />KM/10Minutes
+        <span>Distance/Minutes:</span><input type="input" name="distance" value="5" />KM/Minutes
     </div>
     <div>
     <span>time:</span><input type="input" name="time" value="<?php echo date('Ymd H:i:s')?>" />

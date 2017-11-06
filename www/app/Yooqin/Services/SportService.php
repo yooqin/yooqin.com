@@ -45,7 +45,7 @@ class SportService
 
             $_arr['total'] = isset($rs->total) ? $rs->total : 0;
 
-            $_arr['pre'] = round($_arr['total'] / $_arr['target_value'], 2);
+            $_arr['pre'] = round($_arr['total'] / $_arr['target_value'], 2) * 100;
 
             $total += $_arr['pre'];
             $list[$_key] = $_arr;

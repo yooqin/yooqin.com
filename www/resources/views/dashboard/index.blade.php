@@ -202,7 +202,7 @@ padding:4px;
 <script>
 var cal = new CalHeatMap();
 	cal.init({
-		start: new Date(2017, 9), // January, 1st 2000
+		start: new Date(2017, 8), // January, 1st 2000
 		end: new Date(2018, 10), // January, 1st 2000
 		range: 12,
 		domain: "month",

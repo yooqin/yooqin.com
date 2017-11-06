@@ -98,9 +98,7 @@ class SportService
             $qixie = $qixie / 20;
 
             $total = $run+$bike+$qixie;
-
-            $total = $total < 1 ? 1 : $total;
-            $total = floor($total);
+            $total = ceil($total);
 
 
             $tt = strtotime($_day);

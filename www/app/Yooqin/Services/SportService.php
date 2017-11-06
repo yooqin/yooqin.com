@@ -94,11 +94,16 @@ class SportService
             } else {
                 $run = $run / 2;
             }
+
+            //10km以上最高
+            $run = $run == 5 ? 6 : $run;
+
             $bike = $bike / 20;
             $qixie = $qixie / 20;
 
             $total = $run+$bike+$qixie;
-            $total = ceil($total);
+            $total = floor($total);
+            $total = $total ? $total : 1;
 
 
             $tt = strtotime($_day);

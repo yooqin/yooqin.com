@@ -27,7 +27,7 @@ class DashboardController extends Controller
 
     public function store(Request $request)
     {
-        if (!Auth::id() && 0) {
+        if (!Auth::id()) {
             return $this->jsonFailed('请登录..'); 
         }
 

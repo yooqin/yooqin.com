@@ -114,7 +114,7 @@ padding:4px;
 </div>
 
 
-@if (Auth::id() || 1)
+@if (Auth::id())
 <form style="padding:20px;" class="fm">
     <div>
         <span>Title:</span><input type="input" name="title" value="" />

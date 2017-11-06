@@ -159,7 +159,10 @@ padding:4px;
 	var config = liquidFillGaugeDefaultSettings();
     config.circleThickness = 0.2;
     config.textVertPosition = 0.2;
-    config.waveAnimateTime = 1000;
+    config.waveAnimateTime = 1500;
+    config.textVertPosition = 0.5;
+    config.waveHeight = 0.2;
+    config.waveCount = 1;
 
 
     var gauge1 = loadLiquidFillGauge("fillgauge1", <?php echo $target_total;?>, config);
@@ -168,8 +171,8 @@ padding:4px;
     config1.textColor = "#FF4444";
     config1.waveTextColor = "#FFAAAA";
     config1.waveColor = "#FFDDDD";
-    config1.circleThickness = 0.2;
-    config1.textVertPosition = 0.2;
+    config1.circleThickness = 0.1;
+    config1.textVertPosition = 0.5;
     config1.waveAnimateTime = 1000;
 
     var gauge2= loadLiquidFillGauge("fillgauge2", <?php echo $target_list[1]['pre'];?>, config1);
@@ -179,11 +182,11 @@ padding:4px;
     config2.waveTextColor = "#805615";
     config2.waveColor = "#AA7D39";
     config2.circleThickness = 0.1;
-    config2.circleFillGap = 0.2;
-    config2.textVertPosition = 0.8;
-    config2.waveAnimateTime = 2000;
-    config2.waveHeight = 0.3;
-    config2.waveCount = 1;
+    //config2.circleFillGap = 0.2;
+    config2.textVertPosition = 0.5;
+    config2.waveAnimateTime = 1000;
+    //config2.waveHeight = 0.3;
+    //config2.waveCount = 1;
     var gauge3 = loadLiquidFillGauge("fillgauge3", <?php echo $target_list[2]['pre'];?>, config2);
     
     var config5 = liquidFillGaugeDefaultSettings();
@@ -192,11 +195,11 @@ padding:4px;
     config5.waveTextColor = "#6DA398";
     config5.waveColor = "#246D5F";
 	config5.circleThickness = 0.1;
-    config5.circleFillGap = 0.2;
-    config5.textVertPosition = 0.8;
-    config5.waveAnimateTime = 2000;
-    config5.waveHeight = 0.3;
-    config5.waveCount = 1;
+    //config5.circleFillGap = 0.2;
+    config5.textVertPosition = 0.5;
+    config5.waveAnimateTime = 1000;
+    //config5.waveHeight = 0.3;
+    //config5.waveCount = 1;
     var gauge6 = loadLiquidFillGauge("fillgauge6", <?php echo $target_list[3]['pre'];?>, config5);
 </script>
 

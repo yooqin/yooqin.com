@@ -54,7 +54,7 @@ class SportService
 
         return [
             'list'=>$list,
-            'total'=>round($total / count(self::$target), 2) 
+            'total'=>round($total / count(self::$target)) 
             ];
 
         return $list;

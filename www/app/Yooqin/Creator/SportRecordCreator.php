@@ -11,14 +11,15 @@ class SportRecordCreator{
 
         $data = [
             'title'=>$request->title,
-            'day'=>$request->day,
             'type'=>$request->type,
             'distance'=>$request->distance,
             'time'=>$request->time 
             ];
         $sport = new SportRecord();
         $sport->title = $data['title'];
-        $sport->day = $data['day'];
+        $day = isset($data['time']) ? $data['time'] : date("Ymd H:i:s");
+        $day = date("Ymd", strtotime($day));
+        $sport->day = $day;
         $sport->type = $data['type'];
         $sport->distance = $data['distance'];
         $time = $data['time'] ? strtotime($data['time']) : 0;

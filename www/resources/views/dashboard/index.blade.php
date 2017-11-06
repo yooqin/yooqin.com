@@ -114,13 +114,13 @@ padding:4px;
 </div>
 
 
-@if (Auth::id())
+@if (Auth::id() || 1)
 <form style="padding:20px;" class="fm">
     <div>
         <span>Title:</span><input type="input" name="title" value="" />
     </div>
     <div>
-    <span>Day:</span><input type="input" name="day" value="<?php echo date("Ymd")?>"/>
+    <span>time:</span><input type="input" name="time" value="<?php echo date('Ymd H:i:s')?>" />
     </div>
     <div>
         <span>Type:</span>
@@ -134,7 +134,7 @@ padding:4px;
         <span>Distance/Minutes:</span><input type="input" name="distance" value="5" />KM/Minutes
     </div>
     <div>
-    <span>time:</span><input type="input" name="time" value="<?php echo date('Ymd H:i:s')?>" />
+
     </div>
     <div>
         <input type="button" value="提交" id="submit"/>

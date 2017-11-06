@@ -69,28 +69,48 @@ class SportService
             ->where('day', '<=', $end)
             ->get();
         $list = [];
-        if ($records) {
-            foreach ($records as $_item) {
-                $ts = $_item->time ? $_item->time : $_item->created_at;
-                $max = 0;
-                switch($_item->type){
-                    case 1 :
-                        $max = floor($_item->distance / 2); 
-                        break;
-                    case 2 :
-                        $max = floor($_item->distance / 20); 
-                        break;
-                    case 3 :
-                        $max = floor($_item->distance / 20); 
-                        break;
-                }
 
-                for ($i=0; $i<$max; $i++) {
-                    $list[$ts] = $_item->distance;
-                    $ts += 100;
-                }
-            }
+        if (!$records) {
+            return $list; 
         }
+
+        $tmp = [];
+        foreach ($records as $_item) {
+            $ts = $_item->time ? $_item->time : $_item->created_at;
+            $tmp[date("Ymd", $ts)][$_item->type][] = $_item->distance; 
+        }
+
+        foreach ($tmp as $_day=>$_arr) {
+            //计算
+            $run = isset($_arr[1]) ? array_sum($_arr[1]) : 0;
+            $bike = isset($_arr[2]) ? array_sum($_arr[2]) : 0;
+            $qixie = isset($_arr[3]) ? array_sum($_arr[3]) : 0;
+
+            if ($run <= 6) {
+                $run = $run / 3; 
+            } else if($run <= 9) {
+                $run = $run / 2.5; 
+            } else {
+                $run = $run / 2;
+            }
+            $bike = $bike / 20;
+            $qixie = $qixie / 20;
+
+            $total = $run+$bike+$qixie;
+
+            $total = $total < 1 ? 1 : $total;
+            $total = $total >= 5 ? 5 : $total;
+            $total = floor($total);
+
+
+            $tt = strtotime($_day);
+            for ($i=0; $i<$total; $i++) {
+                $tt += 100;
+                $list[$tt] = $total;
+            }
+            
+        }
+
         return $list;
     }
 

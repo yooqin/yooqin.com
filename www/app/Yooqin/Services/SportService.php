@@ -96,7 +96,9 @@ class SportService
             }
 
             //10km以上最高
-            $run = $run == 5 ? 6 : $run;
+            if ($run >= 5 && $run <= 6) {
+                $run = 6; 
+            }
 
             $bike = $bike / 20;
             $qixie = $qixie / 20;

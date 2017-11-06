@@ -81,6 +81,7 @@ class SportService
         }
 
         foreach ($tmp as $_day=>$_arr) {
+            $total = 0;
             //计算
             $run = isset($_arr[1]) ? array_sum($_arr[1]) : 0;
             $bike = isset($_arr[2]) ? array_sum($_arr[2]) : 0;

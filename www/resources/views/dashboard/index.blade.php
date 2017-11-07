@@ -57,7 +57,7 @@ padding:4px;
 
 <div class="comments clearfix">
 	<div class="left">
-    <h3 style="color:#178bc9; font-size:16px; line-height:30px;"><?php echo date("Y年m");?>月份目标, 今天<?php echo date("Y-m-d");?></h3>
+    <h3 style="color:#178bc9; font-size:16px; line-height:30px;"><?php echo date("Y年m");?>月份目标, 第<?php echo date("j");?>天</h3>
 		<!-- 总目标 -->
 		<svg id="fillgauge1" width="97%" height="250"></svg>
 		<!-- 跑步 -->

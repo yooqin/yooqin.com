@@ -89,7 +89,7 @@ class SportService
 
             if ($run <= 6) {
                 $run = $run / 3; 
-            } else if($run <= 9) {
+            } else if($run < 8) {
                 $run = $run / 2.5; 
             } else {
                 $run = $run / 2;

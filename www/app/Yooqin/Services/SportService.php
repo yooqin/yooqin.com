@@ -117,13 +117,8 @@ class SportService
 
     public static function getList()
     {
-        $start = date("Ymd", time() - 86400 * 60);  
-        $end = date("Ymd");
-
-        $records = SportRecord::where('day', '>=', $start)
-            ->where('day', '<=', $end)
-            ->orderBy('day', 'asc')
-            ->get();
+        $records = SportRecord::orderBy('day', 'desc')
+            ->paginate(16);
         $list = [];
         if ($records) {
             foreach ($records as $_item) {
@@ -136,7 +131,12 @@ class SportService
                 $list[] = $_arr;
             }
         }
-        return $list;
+
+
+        return [
+            'list'=>$list,
+            'paginate'=>$records->links() 
+            ];
     }
 
 }

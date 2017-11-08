@@ -87,7 +87,7 @@ padding:4px;
         </tr>
       </thead>
       <tbody>
-        @foreach($list as $_item)
+        @foreach($list['list'] as $_item)
         <tr class="c{{$_item['type']}}">
           <th scope="row">{{$_item['day']}}</th>
           <td>{{$_item['type_name']}}</td>
@@ -111,6 +111,7 @@ padding:4px;
         @endforeach
       </tbody>
     </table>
+    <div>{{$list['paginate']}}</div>
 	</div>
 </div>
 

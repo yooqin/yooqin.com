@@ -100,7 +100,10 @@ class SportService
                 $run = 6; 
             }
 
-            $bike = ceil($bike / 20);
+            $bike = $bike / 20;
+            if ($bike > 26) {
+                $bike = ceil($bike);
+            }
             $qixie = $qixie / 20;
 
             $total = $run+$bike+$qixie;
